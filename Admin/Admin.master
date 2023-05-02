@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+         
+        }
+        .style2
+        {
+            width: 36px;
+        }
+        .style3
+        {
+            width: 36px;
+            color: #FF9900;
+        }
+        .style4
+        {
+            width: 36px;
+            color: #009999;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table cellpadding="0" cellspacing="0" class="style1"
+        
+            style="border-left: thin solid #FF9900; border-right: thin solid #FF9900; border-top: thick solid #FF9900; border-bottom: thin solid #FF9900; font-family: Arial, Helvetica, sans-serif;">
+            <tr>
+                <td style="text-align: center" class="style2">
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="80px" 
+                    ImageUrl="~/Images/logo3.png" Width="138px" />
+                </td>
+                <td 
+                 style="padding: 5px; font-size: xx-large; font-weight: 700" class="style5">
+                <span class="style3">ONLINE </span>
+                <br />
+&nbsp;&nbsp;&nbsp;&nbsp; <span class="style4">PHARMASY</span></td>
+            
+                <td 
+                 
+                    style="padding: 5px; font-size: xx-large; font-weight: 700; text-align: right;">
+                    ADMIN PANEL&nbsp;
+                    <asp:Image ID="Image1" runat="server" Height="41px" 
+                        ImageUrl="~/Images/login.jpg" Width="59px" />
+                </td>
+            
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                        RenderingMode="Table" Width="100%" ForeColor="White" Height="41px" 
+                        style="text-align: center; background-color: #009999; font-weight: 700;" 
+                        onmenuitemclick="Menu1_MenuItemClick">
+                        <DynamicMenuStyle BackColor="#009999" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Admin/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Manage" Value="Manage" NavigateUrl="~/Admin/Manage.aspx">
+                                <asp:MenuItem NavigateUrl="~/Admin/Manage_category.aspx" Text="Manage Category" 
+                                    Value="Manage Category"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/Company_name.aspx" Text="Manage Company" 
+                                    Value="Manage Company"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/Product.aspx" Text="Manage Product" 
+                                    Value="Manage Product"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Process" Value="Process" 
+                                NavigateUrl="~/Admin/Processaspx.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="View" Value="Viwe" NavigateUrl="~/Admin/View.aspx">
+                                <asp:MenuItem NavigateUrl="~/Admin/View Feedback.aspx" Text="View Feedback" 
+                                    Value="View Feedback"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/View Product.aspx" Text="View Product" 
+                                    Value="View Product"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/View Registration.aspx" 
+                                    Text="View Registration" Value="View Registration"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/View Enquiry.aspx" Text="View Enquiry" 
+                                    Value="View Enquiry"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Report" Value="Report" NavigateUrl="~/Admin/Report.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+      
+            <tr>
+                <td colspan="3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="color: #FFFFFF; background-color: #FF9900">
+               <marquee width="100%" scrollamount="10" behavior="alternate" 
+                    style="height: 25px">Project By: Pratik & Rushikesh</marquee></td>
+
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

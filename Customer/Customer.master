@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Customer.master.cs" Inherits="Customer_Customer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style6
+        {
+        }
+         .style3
+        {
+            width: 36px;
+            color: #FF9900;
+        }
+        .style4
+        {
+            width: 36px;
+            color: #009999;
+        }
+        .style8
+        {
+            width: 40px;
+            height: 102px;
+        }
+        .style9
+        {
+            width: 89px;
+            height: 102px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table cellpadding="0" cellspacing="0" class="style1"
+        style="border-left: thin solid #FF9900; border-right: thin solid #FF9900; border-top: thick solid #FF9900; border-bottom: thin solid #FF9900; font-family: Arial, Helvetica, sans-serif;">
+           
+            <tr>
+            <td style="text-align: center" class="style8">
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="80px" 
+                    ImageUrl="~/Images/logo3.png" Width="138px" />
+                </td>
+
+                <td 
+                 style="padding: 5px; font-size: xx-large; font-weight: 700; text-align:left" 
+                    class="style9">
+                <span class="style3">ONLINE </span>
+                <br />
+                        <span class="style4">PHARMASY</span></td>
+            
+                <td style="text-align: right" align="right">
+                 <asp:ImageButton ID="ImageButton2" runat="server" Height="36px" 
+                    ImageUrl="~/Images/cart logo2.png" Width="105px" />
+                    &nbsp;</td>
+            </tr>
+           
+            <tr>
+            <td style="text-align: center" class="style6" colspan="3">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+                        RenderingMode="Table" Width="100%" BackColor="#009999" Height="38px" 
+                        ForeColor="White">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Customer/Home.aspx" Text="Home" Value="Home">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Customer/Product menu.aspx" Text="Product" 
+                                Value="Product"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Customer/Order.aspx" Text="Order" Value="Order">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Customer/Cancalorder.aspx" Text="CancelOrder" 
+                                Value="CancelOrder"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Customer/Myorder.aspx" Text="Myorder" 
+                                Value="Myorder"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Customer/Myprofile.aspx" Text="Myprofile" 
+                                Value="Myprofile"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/User/Home.aspx" Text="Logout" Value="Logout">
+                            </asp:MenuItem>
+                            <asp:MenuItem></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+
+            </tr>
+           
+            <tr>
+            <td style="text-align: center" class="style6" colspan="3">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="3" style="color: #FFFFFF; background-color: #FF9900">
+                <marquee width="100%" scrollamount="10" behavior="alternate" 
+                    style="height: 25px">Project By: Pratik & Rushikesh</marquee>
+                   </td>
+            </tr>
+           
+        </table>
+    </div>
+    </form>
+</body>
+</html>
